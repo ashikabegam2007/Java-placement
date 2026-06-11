@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      System.out.println("Enter a number");
+      System.out.println(n);
+      int seq=n;
+      int count=0;
+      while(seq!=1){
+      if(seq%2==0){
+        count++;
+        seq = seq/2;
+        System.out.println(seq);
+      }
+      else{
+        seq=(3*seq)+1;
+        count++;
+        System.out.println(seq);
+      
+        
+      }
+
+      }
+      System.out.print("count:"+count);
+      
+        
+        
+      }
+      
+      
+    }
