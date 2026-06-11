@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int p = sc.nextInt();
+        int q = sc.nextInt();
+        if((n>p&&n<q)||(n>q&&n<p)){
+                System.out.println("The treasure is in the box which has number "+n+".");
+                
+            }
+        else if((p>q&&p<n)||(p>n&&p<q)){
+                System.out.println("The treasure is in the box which has number "+p+".");
+                
+            }
+        
+        else{
+                System.out.println("The treasure is in the box which has number "+q+".");
+            }        
+        if(p%n==0&&q%n==0){
+            System.out.print("The code to open the box is "+n+".");
+        }
+        else if(n%p==0&&q%p==0){
+            System.out.print("The code to open the box is "+p+".");
+        }
+        else if(n%q==0&&p%q==0){
+            System.out.print("The code to open the box is "+q+".");
+        }
+            
+        }
+        
+
+}
