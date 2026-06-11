@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        if (n < 1 || n > 20 || m < 1 || m > 20) {
+            System.out.println("Invalid Input");
+            return; 
+        }
+        long a = 0; 
+        long b = 1; 
+        double totalSum = 0.0;
+        for (int i = 1; i <= m; i++) {
+            if (i >= n) {
+                totalSum += a;
+            }
+            long next = a + b;
+            a = b;
+            b = next;
+        }
+        System.out.println("The Sum of Fibonacci value is " + totalSum);
+    }
+}
