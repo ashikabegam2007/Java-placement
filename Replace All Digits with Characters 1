@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       String str=sc.next();
+       int n=str.length();
+       int arr1[]=new int[n];
+       int arr2[]=new int[n];
+       int num[] = new int[n];
+       for(int i=0;i<n;i++){
+           if(i%2==0){
+             char ch=str.charAt(i);
+             arr1[i]=(int) ch;
+             System.out.print(ch);
+        }
+            else{
+             char ch=str.charAt(i);
+             arr2[i]=ch-'0';
+             num[i]=arr1[i-1]+arr2[i];
+        System.out.print((char)num[i]);
+       }
+        }
+       //System.out.print(num);
+    }
+
+       
+    }
