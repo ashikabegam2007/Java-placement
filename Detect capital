@@ -1,0 +1,31 @@
+class Solution {
+    public boolean detectCapitalUse(String word) {
+
+        int upper = 0;
+
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+
+            if (ch >= 65 && ch <= 90) {
+                upper++;
+            }
+        }
+
+        if (upper == word.length()) {
+            return true; // all capitals
+        }
+
+        if (upper == 0) {
+            return true; // all lowercase
+        }
+
+        if (upper == 1) {
+            char ch = word.charAt(0);
+            if (ch >= 65 && ch <= 90) {
+                return true; // only first letter capital
+            }
+        }
+
+        return false;
+    }
+}
